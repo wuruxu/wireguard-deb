@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+case "$1" in
+    configure)
+        systemctl daemon-reload
+        systemctl enable wg0.service
+        systemctl enable watchdog-wg0.timer
+        systemctl start wg0.service
+        systemctl start watchdog-wg0.timer
+    ;;
+esac
+
+exit 0

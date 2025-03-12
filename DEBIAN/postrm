@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+case "$1" in
+    purge)
+        rm -f /lib/systemd/system/wg0.service
+        rm -f /lib/systemd/system/watchdog-wg0.service
+        rm -f /lib/systemd/system/watchdog-wg0.timer
+        systemctl daemon-reload
+    ;;
+esac
+
+exit 0

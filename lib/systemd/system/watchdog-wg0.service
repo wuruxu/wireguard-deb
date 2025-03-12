@@ -1,0 +1,8 @@
+[Unit]
+Description=Run wg0 watchdog Script Every 2 Minutes
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/watchdog-wireguard-wg0.sh
+Environment="PEER_PUBKEY=xyzdt34/GVmHkpjU9Jpz9/BEdx9aNjTpba9fTvcUgs=" "PEER_ENDPOINT=wg.mydomain.cn:21008" "WG_INTERFACE=wg0"

@@ -1,0 +1,6 @@
+Package: wireguard-deb
+Version: 1.0.3
+Maintainer: wrxzzj@gmail.com
+Architecture: amd64
+Depends: systemd
+Description: wireguard client service for debian/ubuntu
