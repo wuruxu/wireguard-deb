@@ -2,7 +2,7 @@
 Description=Run wg0 watchdog Script Every 2 Minutes
 
 [Timer]
-OnBootSec=1min
+OnBootSec=5min
 OnUnitActiveSec=2min
 Unit=watchdog-wg0.service
 

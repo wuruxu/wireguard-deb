@@ -1,9 +1,9 @@
 [Unit]
 Description=wireguard wg0 service
-After=network.target
+After=network-online.target
 
 [Service]
-ExecStart=sh /usr/bin/wireguard-wg0.sh
+ExecStart=bash /usr/bin/wireguard-wg0.sh
 User=root
 Group=root
 Environment="PEER_PUBKEY=xyzdt34/GVmHkpjU9Jpz9/BEdx9aNjTpba9fTvcUgs=" "PEER_ENDPOINT=wg.mydomain.cn:21008" "WG_INTERFACE=wg0"
